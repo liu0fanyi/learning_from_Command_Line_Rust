@@ -1,0 +1,21 @@
+warning: fields `lines` and `bytes` are never read
+  --> src/lib.rs:11:5
+   |
+9  | pub struct Config {
+   |            ------ fields in this struct
+10 |     files: Vec<String>,
+11 |     lines: usize,
+   |     ^^^^^
+12 |     bytes: Option<usize>,
+   |     ^^^^^
+   |
+   = note: `Config` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `headr` (lib) generated 1 warning
+warning: `headr` (lib test) generated 1 warning (1 duplicate)
+    Finished test [unoptimized + debuginfo] target(s) in 0.02s
+     Running unittests src/lib.rs (target/debug/deps/headr-d0c5cd9a1a1059b2)
+     Running unittests src/main.rs (target/debug/deps/headr-3d68c02dd09fe8d1)
+     Running tests/cli.rs (target/debug/deps/cli-b05b108470d22586)
+error: test failed, to rerun pass `--test cli`
